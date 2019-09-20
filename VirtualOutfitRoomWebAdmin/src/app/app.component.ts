@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DisplayService} from './service/displayservice.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'VirtualOutfitRoomWebAdmin';
+  title = 'VirtualOutfitRoom-WebAdmin';
+  constructor(private displaySer : DisplayService){}
 }
