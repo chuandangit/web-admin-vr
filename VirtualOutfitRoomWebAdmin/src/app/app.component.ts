@@ -1,5 +1,6 @@
+import { AuthenticationService } from './service/authentication.service';
 import { Component } from '@angular/core';
-import { DisplayService} from './service/displayservice.service';
+import { DisplayService } from './service/display.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,7 @@ import { DisplayService} from './service/displayservice.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'VirtualOutfitRoom-WebAdmin';
-  constructor(private displaySer : DisplayService){}
+  title = 'VirtualOutfitRoom';
+
+  constructor(private authSer:AuthenticationService, private displaySer:DisplayService) {}
 }
