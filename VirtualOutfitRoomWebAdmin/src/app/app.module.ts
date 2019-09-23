@@ -29,7 +29,6 @@ import { ProductComponent } from './component/product/product.component';
 import { OrderComponent } from './component/order/order.component';
 import { CustomerComponent } from './component/customer/customer.component';
 import { AdminComponent } from './component/admin/admin.component';
-import { DataTableComponent } from './component/other/data-table/data-table.component';
 
 
 
@@ -49,7 +48,6 @@ import { DataTableComponent } from './component/other/data-table/data-table.comp
     OrderComponent,
     CustomerComponent,
     AdminComponent,
-    DataTableComponent,
   
     
     

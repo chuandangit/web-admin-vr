@@ -1,24 +1,15 @@
-
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
-import {DataTableDataSource } from '../other/data-table/data-table-datasource'
-import { from } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.css']
 })
-export class CustomerComponent implements AfterViewInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
-  dataSource: DataTableDataSource;
+export class CustomerComponent implements OnInit {
 
-  /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  constructor() { }
 
-  ngAfterViewInit() {
-    this.dataSource = new DataTableDataSource(this.paginator, this.sort);
+  ngOnInit() {
   }
 
 }
