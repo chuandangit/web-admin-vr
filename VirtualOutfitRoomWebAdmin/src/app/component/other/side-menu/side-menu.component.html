@@ -1,0 +1,100 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" [routerLink]="['/']"
+    routerLinkActive="router-link-active">
+    <div class="sidebar-brand-icon ">
+      <i class="fas fa-tshirt"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">AR-Shop</div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!-- Nav Item - Dashboard -->
+  <div >
+    <div class="sidebar-heading headingText">
+      Dashboard
+    </div>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span></a>
+    </li> 
+
+    
+  </div>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+  <div>
+    <!-- Heading -->
+    <div >
+      <div class="sidebar-heading headingText">
+        Product Management
+      </div>
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/category']" routerLinkActive="router-link-active">
+          <i class="fas fa-th-list"></i>
+          <span>Category</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/product']" routerLinkActive="router-link-active">
+          <i class="fas fa-tshirt"></i> 
+          <span>Product</span>
+        </a>
+      </li>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+    </div>
+    <!-- Heading -->
+    <div >
+      <div class="sidebar-heading headingText">
+        Order Management
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item" >
+        <a class="nav-link" [routerLink]="['/order']" routerLinkActive="router-link-active">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Order</span>
+        </a>
+      </li>
+      
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+    </div>
+
+    <div >
+      <div class="sidebar-heading headingText">
+        Human Resource
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/customer']" routerLinkActive="router-link-active">
+          <i class="fas fa-user"></i>
+          <span>Customer</span>
+        </a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="router-link-active">
+          <i class="fas fa-user-cog"></i>
+          <span>Admin</span>
+        </a>
+      </li>
+      
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+    </div>
+
+
+  </div>
+</ul>
+<!-- End of Sidebar -->
