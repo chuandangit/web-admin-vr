@@ -31,6 +31,7 @@ import { OrderComponent } from './component/order/order.component';
 import { AdminComponent } from './component/human/admin/admin.component';
 
 import { CustomerComponent} from './component/human/customer/customer.component';
+import { ProductCreateComponent } from './component/products/product-create/product-create.component';
 
 
 
@@ -50,6 +51,7 @@ import { CustomerComponent} from './component/human/customer/customer.component'
     OrderComponent,
     CustomerComponent,
     AdminComponent,
+    ProductCreateComponent,
 
   
     

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../model/product';
 import { ModalService } from '../../../service/modal.service';
 import { from } from 'rxjs';
+import { ProductCreateComponent } from '../product-create/product-create.component';
 
 @Component({
   selector: 'app-product',
@@ -20,7 +21,7 @@ export class ProductComponent implements OnInit {
   }
 
   openCreate(){
-      
+      this.modalSer.init(ProductCreateComponent , [] , []);
   }
 
 }
