@@ -1,6 +1,6 @@
 
 
-<button class="btn btn-success" [routerLink]="['create']">Add Product</button>
+<button class="btn btn-success" (click) = "openCreate()">Add Product</button>
 <div class="d-flex justify-content-end">
   <div class="form-inline">
     <div class="input-group mb-3">
@@ -26,11 +26,14 @@
         <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('title')">
           Product name <i class="fas fa-sort icon"></i>
         </div>
-        <div class="col-sm-3 d-flex align-items-center clickable" (click)="sort('dateCreated')">
+        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
          Price<i class="fas fa-sort icon"></i>
         </div>
-        <div class="col-sm-3 d-flex align-items-center clickable" (click)="sort('dateCreated')">
+        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
           Quantity<i class="fas fa-sort icon"></i>
+        </div>
+        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
+          Date create<i class="fas fa-sort icon"></i>
         </div>
         <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
           Status<i class="fas fa-sort icon"></i>
@@ -57,11 +60,14 @@
           <div class="col-sm-2 d-flex align-items-center">
             <p>{{product.name}}</p>
           </div>
-          <div class="col-sm-3 d-flex align-items-center">
+          <div class="col-sm-2 d-flex align-items-center">
             <p>{{product.price}}</p>
           </div>
-          <div class="col-sm-3 d-flex align-items-center">
+          <div class="col-sm-2 d-flex align-items-center">
             <p>{{product.quantity}}</p>
+          </div>
+          <div class="col-sm-2 d-flex align-items-center">
+            <p>{{product.datecreated}}</p>
           </div>
           <div class="col-sm-2 d-flex align-items-center">
               <button *ngIf = "product.status == 'enabled'" class="btn btn-info">{{product.status}}</button>

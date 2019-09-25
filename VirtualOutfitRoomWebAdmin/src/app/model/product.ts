@@ -4,5 +4,6 @@ export class Product {
     name : string;
     quantity : number;
     status : string;
+    datecreated : string;
     
 }

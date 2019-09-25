@@ -24,11 +24,13 @@ import { from } from 'rxjs';
 import { DialogComponent } from './component/other/dialog/dialog.component';
 import {MatCheckboxModule, MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/material';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { CategoryComponent } from './component/category/category.component';
-import { ProductComponent } from './component/product/product.component';
+import { CategoryComponent } from './component/products/category/category.component';
+import { ProductComponent } from './component/products/product/product.component';
 import { OrderComponent } from './component/order/order.component';
-import { CustomerComponent } from './component/customer/customer.component';
-import { AdminComponent } from './component/admin/admin.component';
+
+import { AdminComponent } from './component/human/admin/admin.component';
+
+import { CustomerComponent} from './component/human/customer/customer.component';
 
 
 
