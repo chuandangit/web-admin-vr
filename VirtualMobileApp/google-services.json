@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "210291536019",
+    "firebase_url": "https://virtualfittingroom-e1ce2.firebaseio.com",
+    "project_id": "virtualfittingroom-e1ce2",
+    "storage_bucket": "virtualfittingroom-e1ce2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210291536019:android:ffd49881c0e6b93eaa5d66",
+        "android_client_info": {
+          "package_name": "com.project.capstone.virtualmobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210291536019-6a1hfbfggjjjhgi5k1dj8tj151nfqjqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQMN1h4SIwWvgW1MAGknTAZGVqieBhvz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210291536019-6a1hfbfggjjjhgi5k1dj8tj151nfqjqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
