@@ -19,14 +19,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SplashScreenActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.SignInActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.SignUpAcitivity" />
+        <activity android:name=".activity.DescriptionItemActivity" />
+        <activity android:name=".activity.EditUserProfileActivity" />
+        <activity android:name=".activity.ChangePassword"></activity>
     </application>
 
 </manifest>
