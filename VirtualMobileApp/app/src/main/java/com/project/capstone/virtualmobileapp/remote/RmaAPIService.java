@@ -46,7 +46,7 @@ public interface RmaAPIService {
     Call<List<Item>> getMyItems(@Header("Authorization") String authorization);
 
     @GET("/itemSearch")
-    Call<ArrayList<Item>> findItems(@Query("name") String name);
+    Call<List<Item>> findItems(@Query("name") String name);
 
     @GET("/item/search")
     Call<ArrayList<Item>> findItemsByNameAndCategoryWithPrivacy(@Header("Authorization") String authorization, @Query("name") String name, @Query("categoryId") int categoryId);

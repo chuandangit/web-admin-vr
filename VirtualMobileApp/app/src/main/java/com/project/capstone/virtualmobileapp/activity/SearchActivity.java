@@ -1,10 +1,11 @@
 package com.project.capstone.virtualmobileapp.activity;
 
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -12,7 +13,9 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+
 import com.project.capstone.virtualmobileapp.R;
+import com.project.capstone.virtualmobileapp.activity.DescriptionItemActivity;
 import com.project.capstone.virtualmobileapp.adapter.ItemAdapter;
 import com.project.capstone.virtualmobileapp.adapter.ListAdapter;
 import com.project.capstone.virtualmobileapp.databinding.ActivitySearchBinding;

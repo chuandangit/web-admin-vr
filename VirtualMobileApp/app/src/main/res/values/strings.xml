@@ -143,4 +143,5 @@
     <string name="login_reminder">Đăng Nhập Để Tiếp Tục</string>
     <string name="search_hint">Tìm kiếm</string>
     <string name="donation_transaction">Giao Dịch Từ Thiện</string>
+    <string name="buy">Mua</string>
 </resources>

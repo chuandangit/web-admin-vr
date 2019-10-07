@@ -14,7 +14,10 @@ import com.project.capstone.virtualmobileapp.dialog.LoginOptionDialog;
 import com.project.capstone.virtualmobileapp.fragment.MainItemShowFragment;
 import com.project.capstone.virtualmobileapp.fragment.NotificationFragment;
 import com.project.capstone.virtualmobileapp.fragment.UserProfileFragment;
+import com.project.capstone.virtualmobileapp.model.OrderItem;
 import com.project.capstone.virtualmobileapp.utils.UserSession;
+
+import java.util.ArrayList;
 
 import static com.project.capstone.virtualmobileapp.constants.AppStatus.CANCEL_IMAGE_OPTION;
 import static com.project.capstone.virtualmobileapp.constants.AppStatus.LOGIN_REMINDER;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements LoginOptionDialog
 //    private final Fragment ADDFRIEND_FRAGMENT = AddFriendFragment.newInstance();
     private BottomNavigationView bottomNavigationView;
     UserSession userSession;
+    public static ArrayList<OrderItem> orderArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,11 @@ public class MainActivity extends AppCompatActivity implements LoginOptionDialog
         setContentView(R.layout.activity_main);
 
         userSession = new UserSession(getApplicationContext());
+        if (orderArrayList != null) {
 
+        } else {
+            orderArrayList = new ArrayList<>();
+        }
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

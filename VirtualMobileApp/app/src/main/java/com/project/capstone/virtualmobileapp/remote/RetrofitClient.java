@@ -23,7 +23,7 @@ public class RetrofitClient {
                 .setLenient()
                 .create();
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.129.78:8080")
+                .baseUrl(baseUrl)
                 .client(httpClient)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();

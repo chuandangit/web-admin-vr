@@ -1,60 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="match_parent">
+
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:orientation="horizontal"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="fill_parent">
 
 
             <LinearLayout
-                android:id="@+id/lin"
-                android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="wrap_content"
+                android:layout_width="match_parent"
                 android:weightSum="2"
-                android:orientation="vertical">
-
+                android:id="@+id/lin">
 
                 <android.support.v7.widget.SearchView
-                    android:id="@+id/search"
-                    android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:clickable="true" />
+                    android:layout_width="match_parent"
+                    android:id="@+id/search"
+                    android:clickable="true"
+                    android:layout_weight="1" />
 
                 <Spinner
-                    android:theme="@style/MooTheme"
-                    android:id="@+id/spCategory"
-                    android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/spCategory"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_border_trade" />
+                    android:background="@drawable/bg_border_trade"
+                    android:theme="@style/MooTheme" />
+
             </LinearLayout>
 
-
             <!--<ListView-->
+
+
             <!--android:id="@+id/list_view"-->
+
+
             <!--android:layout_width="fill_parent"-->
+
+
             <!--android:layout_height="wrap_content"-->
+
+
             <!--android:layout_alignParentLeft="true"-->
+
+
             <!--android:layout_alignParentStart="true"-->
+
+
             <!--android:layout_below="@+id/lin" />-->
+
 
         </RelativeLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/searchRecyclerView"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </android.support.v7.widget.RecyclerView>
+            android:id="@+id/searchRecyclerView"></android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
+
 </layout>
