@@ -144,4 +144,5 @@
     <string name="search_hint">Tìm kiếm</string>
     <string name="donation_transaction">Giao Dịch Từ Thiện</string>
     <string name="buy">Mua</string>
+    <string name="trans_finish">Hoàn Thành</string>
 </resources>

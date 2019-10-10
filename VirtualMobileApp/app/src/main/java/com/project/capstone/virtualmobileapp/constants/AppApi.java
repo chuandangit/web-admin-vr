@@ -1,7 +1,7 @@
 package com.project.capstone.virtualmobileapp.constants;
 
 public class AppApi {
-    public static final String API_URL = "http://192.168.3.184";
+    public static final String API_URL = "http://192.168.1.173";
     //    public static final String API_URL = "http://192.168.1.21";
     public static final String API_PORT = "8080";
     public static final String WEBSERVER = "http://35.247.191.68:3000";

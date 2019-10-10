@@ -104,8 +104,8 @@ public class MainActivity extends AppCompatActivity implements LoginOptionDialog
     }
 
     public void toOwnTransaction(View view) {
-//        Intent iOwnTransaction = new Intent(this, OwnTransaction.class);
-//        startActivity(iOwnTransaction);
+        Intent iOwnTransaction = new Intent(this, OwnTransaction.class);
+        startActivity(iOwnTransaction);
     }
 
     public void toOwnFriendList(View view) {

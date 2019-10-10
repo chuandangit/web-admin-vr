@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.project.capstone.virtualmobileapp.activity.ChangePassword;
 import com.project.capstone.virtualmobileapp.activity.EditUserProfileActivity;
 import com.project.capstone.virtualmobileapp.R;
+import com.project.capstone.virtualmobileapp.activity.OwnTransaction;
 import com.project.capstone.virtualmobileapp.activity.SignInActivity;
 import com.project.capstone.virtualmobileapp.model.Rate;
 import com.project.capstone.virtualmobileapp.model.Transaction;
@@ -46,7 +47,7 @@ public class UserProfileFragment extends Fragment {
     ImageButton btnQR, iconPhone;
     UserSession userSession;
     RecyclerView rvReviewers;
-//    ReviewerAdapter reviewerAdapter;
+    //    ReviewerAdapter reviewerAdapter;
     ArrayList<Rate> ratingList;
     List<Transaction> transactions;
     int userId;
@@ -282,8 +283,8 @@ public class UserProfileFragment extends Fragment {
     }
 
     public void toOwnTransaction(View view) {
-//        Intent iOwnTransaction = new Intent(getContext(), OwnTransaction.class);
-//        startActivity(iOwnTransaction);
+        Intent iOwnTransaction = new Intent(getContext(), OwnTransaction.class);
+        startActivity(iOwnTransaction);
     }
 
     public void toOwnFriendList(View view) {

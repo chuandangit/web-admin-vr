@@ -68,14 +68,15 @@ public class OrderAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) convertView.getTag();
         }
         OrderItem order = (OrderItem) getItem(position);
+        long oldPrice = order.getNumber() * 2000;
         viewHolder.txtNameOrder.setText(order.getItem().getName());
+        viewHolder.txtPrice.setText(String.valueOf(oldPrice) + " Đ");
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-        viewHolder.txtPrice.setText("Price");
         Picasso.with(context).load("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
                 .placeholder(R.drawable.no)
                 .error(R.drawable.loadingimage)
                 .into(viewHolder.imgOrder);
-        System.out.println("test số lượng trong order "+ order.getNumber());
+        System.out.println("test số lượng trong order " + order.getNumber());
         viewHolder.btnvalues.setText(order.getNumber() + "");
         int number = Integer.parseInt(viewHolder.btnvalues.getText().toString());
         if (number >= 10) {
@@ -99,7 +100,7 @@ public class OrderAdapter extends BaseAdapter {
                 MainActivity.orderArrayList.get(position).setNumber(brandNewNumber);
 //                long brandNewPrice = (presentPrice * brandNewNumber) / presentNumber;
 //                MainActivity.orderArrayList.get(position).setId(brandNewPrice);
-                long brandNewPrice = 2000* brandNewNumber;
+                long brandNewPrice = 2000 * brandNewNumber;
 
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
                 finalViewHolder1.txtPrice.setText(decimalFormat.format(brandNewPrice) + " Đ");
@@ -127,7 +128,7 @@ public class OrderAdapter extends BaseAdapter {
                 MainActivity.orderArrayList.get(position).setNumber(brandNewNumber);
 //                long brandNewPrice = (presentPrice * brandNewNumber) / presentNumber;
 //                MainActivity.orderArrayList.get(position).setPrice(brandNewPrice);
-                long brandNewPrice = 2000* brandNewNumber;
+                long brandNewPrice = 2000 * brandNewNumber;
 
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
                 finalViewHolder.txtPrice.setText(decimalFormat.format(brandNewPrice) + " Đ");

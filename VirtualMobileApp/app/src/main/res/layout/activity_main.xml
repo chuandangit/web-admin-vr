@@ -25,7 +25,6 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:background="@drawable/bg_gradient_dark"
-
         app:itemIconTint="@color/grey"
         app:itemTextColor="@color/grey"
         app:menu="@menu/menu_bottombar"
