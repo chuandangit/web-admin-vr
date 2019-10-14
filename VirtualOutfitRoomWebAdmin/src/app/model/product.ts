@@ -5,5 +5,6 @@ export class Product {
     quantity : number;
     status : string;
     datecreated : string;
+    size : string;
     
 }
