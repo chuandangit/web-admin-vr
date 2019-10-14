@@ -19,16 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".activity.LoginActivity"
-            android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-<!--        <activity android:name=".activity.LoginActivity"></activity>-->
+<!--        <activity android:name=".activity.LoginMethodActivity"></activity>-->
+        <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.VerifyMobile" />
         <activity android:name=".activity.ProfileActivity" />
         <activity android:name=".activity.TransactionDetailActivity" /> <!-- <activity -->
@@ -39,15 +31,15 @@
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-<!--        <activity-->
-<!--            android:name=".activity.MainActivity"-->
-<!--            android:theme="@style/SplashTheme">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name=".activity.LoginMethodActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
