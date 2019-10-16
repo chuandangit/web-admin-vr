@@ -11,19 +11,19 @@
       <form >
         <div class="form-group">
           <label style="font-weight: bold">Firstname: </label>
-          <input class="form-control" name="customerDetail.firstname" [(ngModel)] = "customerDetail.firstname" readonly/> 
+          <!-- <input class="form-control" name="adminDetail.firstname" [(ngModel)] = "adminDetail.firstname" readonly/>  -->
 
           <label style="font-weight: bold">Lastname: </label>
-          <input class="form-control" name="customerDetail.lastname" [(ngModel)] = "customerDetail.lastname" readonly/> 
+          <input class="form-control" name="adminDetail.lastname" [(ngModel)] = "adminDetail.lastname" readonly/> 
 
           <label style="font-weight: bold">Username: </label>
-          <input class="form-control" name="customerDetail.username" [(ngModel)] = "customerDetail.username" readonly/> 
+          <input class="form-control" name="adminDetail.username" [(ngModel)] = "adminDetail.username" readonly/> 
 
           <label style="font-weight: bold">Address: </label>
-          <input class="form-control" name="customerDetail.address" [(ngModel)] = "customerDetail.address" readonly/> 
+          <input class="form-control" name="adminDetail.address" [(ngModel)] = "adminDetail.address" readonly/> 
 
           <label style="font-weight: bold">DateCreated: </label>
-          <input class="form-control" name="customerDetail.datecreated" [(ngModel)] = "customerDetail.datecreated" readonly/> 
+          <input class="form-control" name="adminDetail.datecreated" [(ngModel)] = "adminDetail.datecreated" readonly/> 
 
 
 
@@ -36,7 +36,7 @@
     </div>
     <div class="modal-footer">
       <div class="col-sm-6 d-flex justify-content-end" style="padding: 0px">
-        <button name = "customerDetail.status" *ngIf="customerDetail.status == 'active'"  type="button" class="btn btn-danger" (click)="changeStatus(customerDetail.status)"   ><span>Deactive</span></button>
-        <button name = "customerDetail.status" *ngIf="customerDetail.status == 'deactive'"  type="button" class="btn btn-info" (click)="changeStatus(customerDetail.status)"   ><span>Active</span></button>
+        <button name = "adminDetail.status" *ngIf="adminDetail.status == 'active'"  type="button" class="btn btn-danger" (click)="changeStatus(adminDetail.status)"   ><span>Deactive</span></button>
+        <button name = "adminDetail.status" *ngIf="adminDetail.status == 'deactive'"  type="button" class="btn btn-info" (click)="changeStatus(adminDetail.status)"   ><span>Active</span></button>
       </div>
     </div>

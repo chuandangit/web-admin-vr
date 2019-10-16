@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
 
   @Input() inputs;
   admin : Account;
-  pos : Number;
+  pos : number;
   ADMIN : Account[] = [{id : 6 ,  firstname : 'admin' , lastname : 'admin' , username : 'admin' , address : '43/5 vuon lai , q12, hcm' ,status: "active" , datecreated : "10-10-2019"}
                             ]
 
@@ -23,8 +23,10 @@ export class AdminComponent implements OnInit {
   }
 
   openAdDetail(id){
-      
-      this.modalService.init(AdminDetailComponent, this.inputs , [])
+      this.pos = 0;
+      this.admin = this.ADMIN[0]
+      this.modalService.init(AdminDetailComponent, this.admin , [])
+      console.log(this.ADMIN)
   }
 
 }
