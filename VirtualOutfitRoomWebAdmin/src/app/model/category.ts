@@ -3,7 +3,8 @@ import { SubCategory } from './subcategory';
 SubCategory
 export class Category {
   id:Number;
-  name:String;
-  description:String;
-  
+  name:string;
+  description:string;
+  subcategory : Array<SubCategory>;
+  status : string;
 }
