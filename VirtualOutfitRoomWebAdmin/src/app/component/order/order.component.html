@@ -62,8 +62,8 @@
           {{order.account_id}}
         </div>
         <div class="col-sm-4 d-flex align-items-center">
-            <button title="status" style="margin-left: 6px; margin-right: 6px" class="btn btn-danger" *ngIf = "order.status == 'pending'"  >{{order.status}}</button>
-            <button title="status" style="margin-left: 6px; margin-right: 6px" class="btn btn-info" *ngIf = "order.status == 'completed'" >{{order.status}}</button>
+            <button title="status" style="margin-left: 6px; margin-right: 6px" class="btn btn-danger" *ngIf = "order.status == 'pending'" disabled>{{order.status}}</button>
+            <button title="status" style="margin-left: 6px; margin-right: 6px" class="btn btn-info" *ngIf = "order.status == 'completed'" disabled >{{order.status}}</button>
         </div>
         
         
