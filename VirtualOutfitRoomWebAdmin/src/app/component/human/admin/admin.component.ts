@@ -8,12 +8,17 @@ import {Account} from '../../../model/account';
 })
 export class AdminComponent implements OnInit {
 
-  ADMIN : Account[] = [{id : 6 ,  firstname : 'admin' , lastname : 'admin' , username : 'admin' , address : '43/5 vuon lai , q12, hcm' ,status: "active"}
+  
+  ADMIN : Account[] = [{id : 6 ,  firstname : 'admin' , lastname : 'admin' , username : 'admin' , address : '43/5 vuon lai , q12, hcm' ,status: "active" , datecreated : "10-10-2019"}
                             ]
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openAdDetail(){
+
   }
 
 }

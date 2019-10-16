@@ -80,8 +80,8 @@
             {{cus.address}}
            </div>
           <div class="col-sm-1 d-flex align-items-center">
-            <button *ngIf = "cus.status == 'active'" class="btn btn-info">{{cus.status}}</button>
-          <button *ngIf = "cus.status == 'deactive'" class="btn btn-danger">{{cus.status}}</button>
+            <button *ngIf = "cus.status == 'active'" class="btn btn-info" disabled>{{cus.status}}</button>
+          <button *ngIf = "cus.status == 'deactive'" class="btn btn-danger" disabled>{{cus.status}}</button>
           </div>
           
         </div>

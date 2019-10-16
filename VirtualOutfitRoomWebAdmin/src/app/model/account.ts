@@ -10,5 +10,6 @@ export class Account {
     username : string;
     address : string;
     status : string;
+    datecreated : string;
 
 }

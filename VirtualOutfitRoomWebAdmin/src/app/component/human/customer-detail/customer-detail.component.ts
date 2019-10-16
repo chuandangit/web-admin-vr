@@ -1,3 +1,4 @@
+import { Account } from 'src/app/model/account';
 import { ModalService } from './../../../service/modal.service';
 import { Component, OnInit , Input } from '@angular/core';
 
@@ -10,10 +11,14 @@ import { Component, OnInit , Input } from '@angular/core';
 export class CustomerDetailComponent implements OnInit {
 
   @Input() inputs ; 
+  customerDetail : Account;
 
   constructor(private modalService : ModalService) { }
 
   ngOnInit() {
+    this.customerDetail = new Account();
+    this.customerDetail = this.inputs;
+
   }
 
   closeModal(){
@@ -21,5 +26,13 @@ export class CustomerDetailComponent implements OnInit {
   }
 
 
+  changeStatus(status){
+    if(status == 'active'){
+      this.customerDetail.status = 'deactive'
+    }else{
+      this.customerDetail.status = 'active'
+    }
+    this.modalService.destroy();
+  }
 
 }
