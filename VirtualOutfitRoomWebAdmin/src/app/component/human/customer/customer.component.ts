@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Account } from 'src/app/model/account';
+im
 
 
 @Component({
@@ -17,6 +18,10 @@ export class CustomerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openCusdetail(){
+      
   }
 
 }

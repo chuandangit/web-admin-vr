@@ -18,6 +18,7 @@ import { OrderComponent } from './component/order/order.component';
 import { AdminComponent } from './component/human/admin/admin.component';
 import { CustomerComponent } from './component/human/customer/customer.component';
 import { ProductCreateComponent } from './component/products/product-create/product-create.component';
+import { CustomerDetailComponent } from './component/human/customer-detail/customer-detail.component';
 
 
 
@@ -29,7 +30,12 @@ const authRoutes: Routes = [
   {path : "customer" , component : CustomerComponent},
   {path : "admin" , component : AdminComponent},
 
-  {path : "create-product" , component : ProductCreateComponent}
+
+  //create new products
+  {path : "create-product" , component : ProductCreateComponent},
+
+  //view cus detail 
+  {path: "customer-detail" ,component : CustomerDetailComponent}
     
 ];
 

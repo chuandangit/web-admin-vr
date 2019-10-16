@@ -72,8 +72,8 @@
           {{ad.username}}
         </div>
         <div class="col-sm-2 d-flex align-items-center">
-          <button *ngIf = "ad.status == 'active'" class="btn btn-info">{{ad.status}}</button>
-        <button *ngIf = "ad.status == 'deactive'" class="btn btn-danger">{{ad.status}}</button>
+          <button *ngIf = "ad.status == 'active'" class="btn btn-info" disabled>{{ad.status}}</button>
+        <button *ngIf = "ad.status == 'deactive'" class="btn btn-danger" disabled>{{ad.status}}</button>
         </div>
         
         

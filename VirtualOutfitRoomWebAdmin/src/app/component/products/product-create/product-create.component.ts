@@ -1,4 +1,6 @@
+import { ModalService } from './../../../service/modal.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-product-create',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor( private modalServie : ModalService ) { }
 
   ngOnInit() {
+  }
+
+  closeModal(){
+      this.modalServie.destroy();
   }
 
 }
