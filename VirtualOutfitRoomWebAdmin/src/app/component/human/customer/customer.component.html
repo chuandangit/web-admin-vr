@@ -28,7 +28,9 @@
   <div class="w3-indigo list-group-item">
     <div class="row">
       <div class="row col-sm-9">
-
+        <div class="col-sm-1 d-flex align-items-center clickable" (click)="sort('name')">
+          ID  <i class="fas fa-sort icon"></i>
+        </div>
         <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('name')">
           First name <i class="fas fa-sort icon"></i>
         </div>
@@ -38,8 +40,11 @@
         <div class="col-sm-3 d-flex align-items-center clickable" (click)="sort('name')">
           Username
         </div>
-        <div class="col-sm-5 d-flex align-items-center clickable" (click)="sort('name')">
+        <div class="col-sm-3 d-flex align-items-center clickable" (click)="sort('name')">
           Address
+        </div>
+        <div class="col-sm-1 d-flex align-items-center clickable" (click)="sort('name')">
+          Status
         </div>
       
       </div>
@@ -57,18 +62,26 @@
       <div class="row">
         <div class="row col-sm-9" >
 
+          <div class="col-sm-1 d-flex align-items-center">
+            {{cus.id}}
+          </div>
           <div class="col-sm-2 d-flex align-items-center">
             {{cus.firstname}}
           </div>
           <div class="col-sm-2 d-flex align-items-center">
             {{cus.lastname}}
           </div>
-          <div class="col-sm-3 d-flex align-items-center">
-            {{cus.username}}
-          </div>
-          <div  class="col-sm-5 d-flex align-items-center">
+          <div  class="col-sm-3 d-flex align-items-center">
            
-           {{cus.address}}
+           {{cus.username}}
+          </div>
+          <div  class="col-sm-3 d-flex align-items-center">
+           
+            {{cus.address}}
+           </div>
+          <div class="col-sm-1 d-flex align-items-center">
+            <button *ngIf = "cus.status == 'active'" class="btn btn-info">{{cus.status}}</button>
+          <button *ngIf = "cus.status == 'deactive'" class="btn btn-danger">{{cus.status}}</button>
           </div>
           
         </div>
@@ -76,10 +89,8 @@
         <div class="col-sm-3 d-flex align-items-center justify-content-center">
           <div class="w3-dropdown-hover">
 
-            <div class="w3-dropdown-content w3-bar-block">            
-              
-              <button title="detail" style="margin-left: 6px; margin-right: 6px" class="btn btn-info" ><i class="fas fa-eye"></i></button>
-              <button title="deactive" style="margin-left: 6px; margin-right: 6px" class="btn btn-danger" ><i class="fas fa-trash-alt"></i></button>
+            <div class="w3-dropdown-content w3-bar-block">                                                               
+              <button title="detail" style="margin-left: 6px; margin-right: 6px" class="btn btn-primary" ><i class="fas fa-eye"></i></button>
               <button title="history" style="margin-left: 6px; margin-right: 6px" class="btn btn-warning" ><i class="fas fa-history"></i></button>
             </div>
           </div>

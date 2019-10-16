@@ -9,5 +9,6 @@ export class Account {
     lastname : string;
     username : string;
     address : string;
+    status : string;
 
 }

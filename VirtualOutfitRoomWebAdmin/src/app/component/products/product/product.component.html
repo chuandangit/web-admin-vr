@@ -42,7 +42,7 @@
       </div>
 
       <div class="col-sm-2 d-flex align-items-center justify-content-center">
-        Action
+        Operation
       </div>
     </div>
   </div>
@@ -70,8 +70,8 @@
             <p>{{product.datecreated}}</p>
           </div>
           <div class="col-sm-2 d-flex align-items-center">
-              <button *ngIf = "product.status == 'enabled'" class="btn btn-info">{{product.status}}</button>
-            <button *ngIf = "product.status == 'disabled'" class="btn btn-danger">{{product.status}}</button>
+              <button *ngIf = "product.status == 'active'" class="btn btn-info">{{product.status}}</button>
+            <button *ngIf = "product.status == 'deactive'" class="btn btn-danger">{{product.status}}</button>
           </div>
 
         </div>
@@ -83,10 +83,9 @@
                  
                   
 
-                <button class="btn btn-info" > <i class="fas fa-eye"></i></button>      
-                <button class="btn btn-primary" ><i class="fas fa-pen-alt"></i></button>       
-                <button *ngIf = "product.status == 'disabled'" class="btn btn-success"><i class="fas fa-check"></i></button>
-                <button *ngIf = "product.status == 'enabled'" class="btn btn-danger"><i class="fas fa-times"></i></button>
+                <button class="btn btn-primary" > <i class="fas fa-eye"></i></button>      
+                <button class="btn btn-info" ><i class="fas fa-pen-alt"></i></button>       
+                
               </div>
             </div>
           </div>
