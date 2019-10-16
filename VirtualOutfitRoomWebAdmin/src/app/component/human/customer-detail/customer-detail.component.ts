@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ModalService } from './../../../service/modal.service';
+import { Component, OnInit , Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-customer-detail',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() inputs ; 
+
+  constructor(private modalService : ModalService) { }
 
   ngOnInit() {
   }
+
+  closeModal(){
+      this.modalService.destroy();
+  }
+
+
 
 }

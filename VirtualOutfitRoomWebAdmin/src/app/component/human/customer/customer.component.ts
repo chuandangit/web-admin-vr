@@ -1,6 +1,8 @@
+import { ModalService } from './../../../service/modal.service';
 import { Component, OnInit } from '@angular/core';
 import { Account } from 'src/app/model/account';
-im
+import { CustomerDetailComponent } from '../customer-detail/customer-detail.component';
+
 
 
 @Component({
@@ -15,13 +17,15 @@ export class CustomerComponent implements OnInit {
   {id : 3, firstname : 'chi' , lastname : 'le' , username : 'mrtest2' , address : '321 quang trung , go vap, hcm' , status : 'active'}
                             ]
 
-  constructor() { }
+  constructor(private modalService : ModalService) { }
 
   ngOnInit() {
+      
   }
 
-  openCusdetail(){
+  openCusdetail(item){
       
+      this.modalService.init(CustomerDetailComponent, this.CUSTOMER , [])
   }
 
 }

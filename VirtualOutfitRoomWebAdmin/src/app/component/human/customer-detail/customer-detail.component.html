@@ -1,3 +1,105 @@
-<p>
-  customer-detail works!
-</p>
+
+<div class="modal-content" role="document" style="width: 50%; margin-left: 25%">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Customer Detail</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click) = "closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form #newsForm="ngForm">
+        <div class="form-group">
+          <label style="font-weight: bold">ID: </label>
+          <input class="form-control" placeholder="Fill in title"
+            />
+          
+        </div>
+        <div class="form-group">
+          <label style="font-weight: bold">Short Description</label>
+          <textarea class="form-control" placeholder="Fill in short description" name="shortDescription"
+            style="width : 100%"></textarea>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-4">
+                      <label style="font-weight: bold">Quantity</label><br/>
+                      
+                      <form>
+            
+                      <input type="number" name="quantity"
+                        min="0" max="100" step="1" value="1">
+             
+                      </form>
+        
+                  </div>
+                  <div class="col-sm-7">
+                      <label style="font-weight: bold">Size</label><br>
+                      <form>
+                          <input type="checkbox" name="vehicle1" value="Bike">S
+                          <input type="checkbox" name="vehicle2" value="Car">M
+                          <input type="checkbox" name="vehicle1" value="Bike">X
+                          <input type="checkbox" name="vehicle2" value="Car">XL
+                        </form>
+                  </div>
+        
+        
+                </div>
+              </div>
+        
+          
+          <!-- <ckeditor [editor]="Editor" name="content" [(ngModel)]="news.content" #content='ngModel' required
+            [ngClass]="{'is-invalid': (content.invalid && (content.dirty || content.touched))}"
+            (keyup)="wordCountContent(news.content)"></ckeditor> -->
+            
+          <!-- <span *ngIf="!isContent">{{ countContent }} words left</span>
+          <div *ngIf="content.invalid && (content.dirty || content.touched)" class="text-danger">
+            <div *ngIf="content.errors.required">
+              Please fill in content
+            </div>
+          </div>
+          <div *ngIf="isContent" class="text-danger">
+            This content is too long
+          </div> -->
+  
+  
+         
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-4">
+              <label style="font-weight: bold">Image</label> <br>
+              <input type="file" (change)="onFileChange($event)" name="image"
+                required pattern="([^\s]+(\.)(jpg|png|gif)$)">
+  
+              <!-- <div *ngIf="image.invalid && (image.dirty || image.touched)" class="text-danger">
+                <div *ngIf="image.errors.required">
+                  Image is required
+                </div>
+                <div *ngIf="image.errors.pattern">
+                  Please choose the file .png, .jpg, .gif
+                </div>
+              </div> -->
+              <!-- <div *ngIf="isOverSize" class="text-danger">
+                This file is too large
+              </div> -->
+  
+            </div>
+            <div class="col-sm-7">
+              <label style="font-weight: bold">Preview</label> <br>
+              <img [src]="previewImage || 'http://placehold.it/180'" width="400px" height="200px" />
+            </div>
+  
+  
+          </div>
+        </div>
+  
+  
+      </form>
+    </div>
+    <div class="modal-footer">
+      <div class="col-sm-6 d-flex justify-content-end" style="padding: 0px">
+        <button type="button" class="btn btn-info" [routerLink]="['../']"  ><span>Add</span></button>
+      </div>
+    </div>
