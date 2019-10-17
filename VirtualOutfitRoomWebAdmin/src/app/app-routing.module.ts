@@ -21,6 +21,8 @@ import { ProductCreateComponent } from './component/products/product-create/prod
 import { CustomerDetailComponent } from './component/human/customer-detail/customer-detail.component';
 import { AdminDetailComponent } from './component/human/admin-detail/admin-detail.component';
 import { OrderDetailComponent } from './component/order/order-detail/order-detail.component';
+import { CategoryCreateComponent } from './component/products/category-create/category-create.component';
+import { CategoryEditComponent } from './component/products/category-edit/category-edit.component';
 
 
 
@@ -43,10 +45,13 @@ const authRoutes: Routes = [
   {path : "admin-detail" , component: AdminDetailComponent},
 
   //view order detail
-  {path : "order-detail" , component : OrderDetailComponent}
+  {path : "order-detail" , component : OrderDetailComponent},
 
   //view new category
-  
+  {path : "category-create" , component : CategoryCreateComponent},
+
+  //view edit category
+  {path : "category-edit" , component : CategoryEditComponent}
   
     
 ];

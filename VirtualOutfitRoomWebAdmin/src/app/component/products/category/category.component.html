@@ -21,23 +21,15 @@
       <div class="row col-sm-10">
 
         <div class="col-sm-2 d-flex align-items-center clickable">
-          Category <i class="fas fa-sort icon"></i>
+          ID <i class="fas fa-sort icon"></i>
         </div>
-        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('title')">
-          Sub category <i class="fas fa-sort icon"></i>
+        <div class="col-sm-5 d-flex align-items-center clickable" (click)="sort('dateCreated')">
+          Category<i class="fas fa-sort icon"></i>
         </div>
-        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
-         Price<i class="fas fa-sort icon"></i>
+        <div class="col-sm-5 d-flex align-items-center clickable" (click)="sort('dateCreated')">
+          Description<i class="fas fa-sort icon"></i>
         </div>
-        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
-          Quantity<i class="fas fa-sort icon"></i>
-        </div>
-        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
-          Date create<i class="fas fa-sort icon"></i>
-        </div>
-        <div class="col-sm-2 d-flex align-items-center clickable" (click)="sort('dateCreated')">
-          Status<i class="fas fa-sort icon"></i>
-        </div>
+        
 
       </div>
 
@@ -47,43 +39,30 @@
     </div>
   </div>
   <!--Row-->
-  <div class="card" *ngFor="let product of PRODUCT ; let i = index">
+  <div class="card" *ngFor="let cate of CATEGORY; let i = index">
     <div class="list-group-item w3-hover-blue " [ngClass]="{'w3-light-grey': ((i % 2) == 1)}"
       [ngClass]="{'w3-white': ((i % 2) == 0)}" style="border:none">
       <div class="row">
         <div class="row col-sm-10">
 
+         
           <div class="col-sm-2 d-flex align-items-center">
-            <img *ngIf = "product.id == 100" src="https://cdna.4imprint.com/prod/extras/006729/391089/700/1.jpg" width="50px" height="50px" />
-            <img *ngIf = "product.id == 101"  src="https://de9luwq5d40h2.cloudfront.net/catalog/product/large_image/43_41435100025.jpg" width="50px" height="50px" />
+            <p>{{cate.id}}</p>
           </div>
-          <div class="col-sm-2 d-flex align-items-center">
-            <p>{{product.name}}</p>
+          <div class="col-sm-5 d-flex align-items-center">
+            <p>{{cate.name}}</p>
           </div>
-          <div class="col-sm-2 d-flex align-items-center">
-            <p>{{product.price}}</p>
+          <div class="col-sm-5 d-flex align-items-center">
+            <p>{{cate.description}}</p>
           </div>
-          <div class="col-sm-2 d-flex align-items-center">
-            <p>{{product.quantity}}</p>
-          </div>
-          <div class="col-sm-2 d-flex align-items-center">
-            <p>{{product.datecreated}}</p>
-          </div>
-          <div class="col-sm-2 d-flex align-items-center">
-              <button *ngIf = "product.status == 'active'" class="btn btn-info">{{product.status}}</button>
-            <button *ngIf = "product.status == 'deactive'" class="btn btn-danger">{{product.status}}</button>
-          </div>
-
+         
         </div>
 
         <div class="col-sm-2 d-flex align-items-center justify-content-center">
           <div class="w3-dropdown-hover">
             <div class="w3-dropdown-content w3-bar-block">
               <div class="d-flex align-items-center justify-content-center">
-                 
-                  
-
-                <button class="btn btn-primary" > <i class="fas fa-eye"></i></button>      
+                      
                 <button class="btn btn-info" ><i class="fas fa-pen-alt"></i></button>       
                 
               </div>
@@ -94,11 +73,11 @@
     </div>
 
   </div>
-  <div *ngIf="PRODUCT.length == 0" class="d-flex justify-content-center">
+  <div *ngIf="CATEGORY.length == 0" class="d-flex justify-content-center">
     <h4>No record found</h4>
   </div>
 </div>
-<div class="d-flex justify-content-end" *ngIf="PRODUCT.length != 0">
+<div class="d-flex justify-content-end" *ngIf="CATEGORY.length != 0">
   <ul class="pagination ">
     <li class="page-item " [ngClass]="{'disabled': currentPage == 1}">
       <button class="page-link" (click)="loadPage(currentPage - 1)" style="font-size: 24px">&laquo;</button>
