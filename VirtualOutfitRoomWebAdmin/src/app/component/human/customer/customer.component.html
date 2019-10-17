@@ -56,7 +56,7 @@
     </div>
   </div>
   <!--Row-->
-  <div class="card" *ngFor="let cus of accounts; let i = index">
+  <div class="card" *ngFor="let cus of CUSTOMER; let i = index">
     <div class="list-group-item w3-hover-blue " [ngClass]="{'w3-light-grey': ((i % 2) == 1)}"
       [ngClass]="{'w3-white': ((i % 2) == 0)}" style="border:none" >
       <div class="row">
@@ -80,8 +80,8 @@
             {{cus.address}}
            </div>
           <div class="col-sm-1 d-flex align-items-center">
-            <button *ngIf = "cus.status == 'active'" class="btn btn-info" disabled>{{cus.status}}</button>
-          <button *ngIf = "cus.status == 'deactive'" class="btn btn-danger" disabled>{{cus.status}}</button>
+            <button *ngIf = "cus.status == 'active'" class="btn btn-info" (click)= "changestatus(cus.id)">{{cus.status}}</button>
+          <button *ngIf = "cus.status == 'deactive'" class="btn btn-danger" (click)= "changestatus(cus.id)">{{cus.status}}</button>
           </div>
           
         </div>

@@ -1,5 +1,5 @@
 import { ModalService } from './../../../service/modal.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import { Account } from 'src/app/model/account';
 import { CustomerDetailComponent } from '../customer-detail/customer-detail.component';
 import { AccountService } from 'src/app/service/account.service';
@@ -12,23 +12,36 @@ import { AccountService } from 'src/app/service/account.service';
 })
 export class CustomerComponent implements OnInit {
 
-  accounts;
+  
+  CUSTOMER : Account[] = [
+]
 
   constructor(private modalService : ModalService ,private accountService : AccountService ) { }
 
   ngOnInit() {
-      this.accounts = new Array();
+      
 
   }
 
-  showAccounts(){
-      this.accountService.getListAccounts().subscribe(result => {
-        this.accounts = result.accountList;
-      })
-  }
+  @Input() inputs;
+  admin : Account;
+  pos : number;
 
-  openCusdetail(item){
-     
-  }
+  changestatus(id) {
+    this.pos = id - 1;
+    this.admin = this.CUSTOMER[this.pos]
+    if(this.admin.status == "active"){
+      this.admin.status = "deactive";
+    }else{
+      this.admin.status = "active";
+    }
+}
+
+openAdDetail(id){
+    this.pos = id - 1;
+    this.admin = this.CUSTOMER[this.pos];
+    this.modalService.init(CustomerDetailComponent, this.admin , []);
+
+}
 
 }

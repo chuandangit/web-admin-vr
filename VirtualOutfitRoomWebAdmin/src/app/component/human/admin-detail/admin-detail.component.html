@@ -22,11 +22,7 @@
           <label style="font-weight: bold">Address: </label>
           <input class="form-control" name="adminDetail.address" [(ngModel)] = "adminDetail.address" readonly/> 
 
-          <label style="font-weight: bold">DateCreated: </label>
-          <input class="form-control" name="adminDetail.datecreated" [(ngModel)] = "adminDetail.datecreated" readonly/> 
-
-
-
+         
         </div>
         
        
@@ -36,7 +32,6 @@
     </div>
     <div class="modal-footer">
       <div class="col-sm-6 d-flex justify-content-end" style="padding: 0px">
-        <button name = "adminDetail.status" *ngIf="adminDetail.status == 'active'"  type="button" class="btn btn-danger" (click)="changeStatus(adminDetail.status)"   ><span>Deactive</span></button>
-        <button name = "adminDetail.status" *ngIf="adminDetail.status == 'deactive'"  type="button" class="btn btn-info" (click)="changeStatus(adminDetail.status)"   ><span>Active</span></button>
+        <button  type="button" class="btn btn-success" (click)="closeModal()"><span>OK</span></button>
       </div>
     </div>
