@@ -7,9 +7,15 @@ export class Account {
     id : number;
     firstname : string;
     lastname : string;
-    username : string;
+    email : string;
     address : string;
-    status : string;
-    datecreated : string;
+    phone : string;
+    username : string;
+    password : string;
+    datecreated : Date;
+    datemodified : Date;
+    isActived: boolean;
+    isDeleted : boolean;
+    roleId : number;
 
 }

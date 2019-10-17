@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { PageSearch } from './../model/page-search';
 import {Account} from '../model/account';
+import { AccountList } from '../model/accountList';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,9 @@ export class AccountService {
     return this.httpClient.get<PageSearch<Account>>(this.api + `?term=${term}`);
   }
 
+  getListAccounts() : Observable<AccountList<Account>> {
+      return this.httpClient.get<AccountList<Account>>(this.api);
+  }
 
 
   getProfile() : Observable<Account>{
