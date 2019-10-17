@@ -7,15 +7,16 @@ export class Account {
     id : number;
     firstname : string;
     lastname : string;
-    email : string;
+    // email : string;
     address : string;
-    phone : string;
+    // phone : string;
     username : string;
-    password : string;
-    datecreated : Date;
-    datemodified : Date;
-    isActived: boolean;
-    isDeleted : boolean;
-    roleId : number;
+    //password : string;
+    //datecreated : string;
+    // datemodified : Date;
+    // isActived: boolean;
+    // isDeleted : boolean;
+    // roleId : number;
+    status : string;
 
 }
