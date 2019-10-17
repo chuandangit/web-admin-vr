@@ -27,12 +27,7 @@ export class CustomerDetailComponent implements OnInit {
 
 
   changeStatus(status){
-    if(status == 'active'){
-      this.customerDetail.status = 'deactive'
-    }else{
-      this.customerDetail.status = 'active'
-    }
-    this.modalService.destroy();
+    
   }
 
 }
