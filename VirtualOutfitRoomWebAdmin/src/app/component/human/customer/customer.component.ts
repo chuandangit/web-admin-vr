@@ -13,8 +13,20 @@ import { AccountService } from 'src/app/service/account.service';
 export class CustomerComponent implements OnInit {
 
   
-  CUSTOMER : Account[] = [
-]
+  CUS : Account[] = [{id : 1 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 2 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 3 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 4 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 5 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 6 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 7 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 8 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 9 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 10 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 11 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  {id : 12 ,  firstname : 'customer' , lastname : 'customer' , username : 'customer' , address : '43/5 vuon lai , q12, hcm' ,status: "active"},
+  
+                          ]
 
   constructor(private modalService : ModalService ,private accountService : AccountService ) { }
 
@@ -24,23 +36,23 @@ export class CustomerComponent implements OnInit {
   }
 
   @Input() inputs;
-  admin : Account;
+  customer : Account;
   pos : number;
 
   changestatus(id) {
     this.pos = id - 1;
-    this.admin = this.CUSTOMER[this.pos]
-    if(this.admin.status == "active"){
-      this.admin.status = "deactive";
+    this.customer = this.CUS[this.pos]
+    if(this.customer.status == "active"){
+      this.customer.status = "deactive";
     }else{
-      this.admin.status = "active";
+      this.customer.status = "active";
     }
 }
 
-openAdDetail(id){
+openCusDetail(id){
     this.pos = id - 1;
-    this.admin = this.CUSTOMER[this.pos];
-    this.modalService.init(CustomerDetailComponent, this.admin , []);
+    this.customer = this.CUS[this.pos];
+    this.modalService.init(CustomerDetailComponent, this.customer , []);
 
 }
 
