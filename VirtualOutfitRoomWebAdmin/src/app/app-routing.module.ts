@@ -44,6 +44,10 @@ const authRoutes: Routes = [
 
   //view order detail
   {path : "order-detail" , component : OrderDetailComponent}
+
+  //view new category
+  
+  
     
 ];
 

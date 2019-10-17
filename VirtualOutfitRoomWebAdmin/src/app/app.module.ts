@@ -35,6 +35,7 @@ import { ProductCreateComponent } from './component/products/product-create/prod
 import { CustomerDetailComponent } from './component/human/customer-detail/customer-detail.component';
 import { AdminDetailComponent } from './component/human/admin-detail/admin-detail.component';
 import { OrderDetailComponent } from './component/order/order-detail/order-detail.component';
+import { CategoryCreateComponent } from './component/products/category-create/category-create.component';
 
 
 
@@ -58,6 +59,7 @@ import { OrderDetailComponent } from './component/order/order-detail/order-detai
     CustomerDetailComponent,
     AdminDetailComponent,
     OrderDetailComponent,
+    CategoryCreateComponent,
 
   
     
