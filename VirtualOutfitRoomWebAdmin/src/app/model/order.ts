@@ -4,4 +4,5 @@ export class Order{
     totalcost : number;
     status : string;
     customer_name : string;
+    address: string;
 }

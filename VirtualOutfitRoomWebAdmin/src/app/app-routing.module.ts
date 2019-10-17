@@ -20,6 +20,7 @@ import { CustomerComponent } from './component/human/customer/customer.component
 import { ProductCreateComponent } from './component/products/product-create/product-create.component';
 import { CustomerDetailComponent } from './component/human/customer-detail/customer-detail.component';
 import { AdminDetailComponent } from './component/human/admin-detail/admin-detail.component';
+import { OrderDetailComponent } from './component/order/order-detail/order-detail.component';
 
 
 
@@ -38,8 +39,11 @@ const authRoutes: Routes = [
   //view cus detail 
   {path: "customer-detail" ,component : CustomerDetailComponent},
 
-  //view ad detaul
+  //view ad detail
   {path : "admin-detail" , component: AdminDetailComponent},
+
+  //view order detail
+  {path : "order-detail" , component : OrderDetailComponent}
     
 ];
 

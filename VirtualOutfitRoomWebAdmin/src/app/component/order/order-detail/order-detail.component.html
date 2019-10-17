@@ -1,3 +1,37 @@
-<p>
-  order-detail works!
-</p>
+
+<div class="modal-content" role="document" style="width: 50%; margin-left: 25%">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Order Detail</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click) = "closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form >
+        <div class="form-group">
+          <!-- <label style="font-weight: bold">Order ID: </label> -->
+          <!-- <input class="form-control" name="adminDetail.firstname" [(ngModel)] = "adminDetail.firstname" readonly/>  -->
+
+          <label style="font-weight: bold">Customer Name: </label>
+          <input class="form-control" name="orderDetail.customer_name" [(ngModel)] = "orderDetail.customer_name" readonly/> 
+
+          <label style="font-weight: bold">Address: </label>
+          <input class="form-control" name="orderDetail.address" [(ngModel)] = "orderDetail.username" readonly/> 
+
+          <label style="font-weight: bold">Total: </label>
+          <input class="form-control" name="orderDetail.totalcost" [(ngModel)] = "orderDetail.totalcost" readonly/> 
+
+         
+        </div>
+        
+       
+  
+  
+      </form>
+    </div>
+    <div class="modal-footer">
+      <div class="col-sm-6 d-flex justify-content-end" style="padding: 0px">
+        <button  type="button" class="btn btn-success" (click)="closeModal()"><span>OK</span></button>
+      </div>
+    </div>
