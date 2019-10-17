@@ -35,9 +35,10 @@ export class OrderComponent implements OnInit {
   }
 
   removeOrder(id){
+    
     this.pos = id - 1;
     this.order = this.ORDER[this.pos];
-    
+    this.order.status = "completed"
   }
 
 }
