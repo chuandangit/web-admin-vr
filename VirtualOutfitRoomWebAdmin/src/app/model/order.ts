@@ -3,4 +3,5 @@ export class Order{
     account_id : number;
     totalcost : number;
     status : string;
+    customer_name : string;
 }

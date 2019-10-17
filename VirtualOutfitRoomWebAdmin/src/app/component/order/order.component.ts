@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input } from '@angular/core';
 import { Order } from '../../model/order';
 import { from } from 'rxjs';
+import { ModalService } from 'src/app/service/modal.service';
 
 @Component({
   selector: 'app-order',
@@ -8,17 +9,25 @@ import { from } from 'rxjs';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent implements OnInit {
-  ORDER : Order[] = [{id : 12001 , account_id : 1 , totalcost : 120000 , status : 'pending'}, 
-  {id : 12002 , account_id : 2 , totalcost : 220000 , status : 'completed'},
-  {id : 12003 , account_id : 4 , totalcost : 620400 , status : 'pending'},
-  {id : 12004 , account_id : 2 , totalcost : 227000 , status : 'completed'},
-  {id : 12005 , account_id : 5 , totalcost : 78000 , status : 'completed'}
+
+  @Input() inputs;
+  pos : number;
+  order : Order;
+
+  ORDER : Order[] = [{id : 1 , account_id : 1 , totalcost : 120000 , status : 'pending' , customer_name : "customer"}, 
+  {id : 2 , account_id : 1 , totalcost : 220000 , status : 'completed' , customer_name: "customer"},
+  {id : 3 , account_id : 2 , totalcost : 620400 , status : 'pending' , customer_name: "customer"},
+  {id : 4 , account_id : 2 , totalcost : 227000 , status : 'completed', customer_name: "customer"},
   
                       ]
 
-  constructor() { }
+  constructor(private modalService : ModalService) { }
 
   ngOnInit() {
+  }
+
+  openOrderDetail(id){
+    
   }
 
 }
