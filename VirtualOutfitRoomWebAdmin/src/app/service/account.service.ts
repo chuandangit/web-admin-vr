@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
@@ -10,6 +11,7 @@ import { AccountList } from '../model/accountList';
   providedIn: 'root'
 })
 export class AccountService {
+  //private api = environment.apiEndPoint + "/account";
   private api = environment.apiEndPoint + "/account";
 
   constructor(private httpClient : HttpClient) {}

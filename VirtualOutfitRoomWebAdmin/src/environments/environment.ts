@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   // apiEndPoint: "http://localhost:8080/officelink"
-  apiEndPoint: "http://localhost:8080"
+  //apiEndPoint: "http://localhost:8080"
+  apiEndPoint : "http://107.150.52.213/api-votf/api"
 };
 
 /*
